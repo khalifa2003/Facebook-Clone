@@ -194,6 +194,7 @@ section {
   display: grid;
   grid-template-columns: 3fr 6fr 3fr;
   gap: 10px;
+  color: #e4e6eb;
 }
 
 /* Main Content (Posts) */
@@ -306,6 +307,20 @@ section {
 .birthday-icon {
   font-size: 18px;
 }
+.contacts .section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+.contacts .section-title div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contacts .section-title div p {
+  font-weight: bold;
+}
 .contacts ul {
   list-style: none;
   padding: 0;
@@ -313,6 +328,7 @@ section {
 .contacts li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
   margin-bottom: 8px;
 }
@@ -330,40 +346,33 @@ section {
   cursor: pointer;
   border-radius: 4px;
 }
-/* Right Sidebar Styling */
 
+/* Right Sidebar Styling */
 .right-sidebar {
-  width: 250px;
-  background-color: #1c1c1c;
-  color: white;
+  color: #e4e6eb;
   padding: 10px;
 }
-
 .right-sidebar .profile {
   display: flex;
   align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid #444;
 }
-
 .right-sidebar .profile img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .right-sidebar .profile p {
   margin: 0;
 }
-
 .right-sidebar .menu,
 .shortcuts ul {
   list-style: none;
   padding: 0;
   margin: 10px 0;
 }
-
 .right-sidebar .menu li,
 .right-sidebar .shortcuts ul li {
   display: flex;
@@ -371,21 +380,175 @@ section {
   padding: 8px 0;
   cursor: pointer;
 }
-
 .right-sidebar .menu li i,
 .right-sidebar .shortcuts ul li i {
   margin-left: 8px;
 }
-
 .right-sidebar .menu .more,
 .right-sidebar .shortcuts .less {
   color: #aaa;
   cursor: pointer;
 }
-
 .right-sidebar .shortcuts p {
   margin: 10px 0;
   font-weight: bold;
   border-top: 1px solid #444;
   padding-top: 10px;
+}
+.feed-container {
+  width: 500px;
+  margin-top: 20px;
+}
+
+/* Stories Section */
+.stories {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #242526;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+.story img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #1877f2;
+}
+.story span {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Create Post Section */
+.create-post {
+  background-color: #242526;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.create-post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.create-post-header .profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.create-post-header input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3a3b3c;
+  color: #e4e6eb;
+  font-size: 14px;
+}
+.create-post-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.create-post-actions button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  color: #65676b;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.create-post-actions button:hover {
+  color: #1877f2;
+}
+.create-post-actions button i {
+  margin-right: 5px;
+}
+
+/* Post Styling */
+.post {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post .post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post .profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post .post-info {
+  flex-grow: 1;
+}
+
+.post .username {
+  font-weight: bold;
+  display: block;
+}
+
+.post .time {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.post .post-content {
+  margin-top: 10px;
+}
+
+.post .post-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #e4e6eb;
+}
+
+.post .post-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.post .post-reactions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #65676b;
+  margin-top: 10px;
+}
+
+.post .post-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e4e6eb;
+}
+
+.post .post-actions button {
+  background: none;
+  border: none;
+  color: #65676b;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.post .post-actions button:hover {
+  color: #1877f2;
 }
