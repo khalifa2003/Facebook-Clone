@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Navbar</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <!-- Profile Picture -->
+      <section class="left-section">
+        <img
+          src="./assets/image.jpg"
+          alt="Profile Picture"
+          class="profile-pic"
+          onclick="toggleDropdown('profileDropdown')"
+        />
+        <i
+          class="fa-solid fa-bell"
+          onclick="toggleDropdown('notificationDropdown')"
+        ></i>
+        <i
+          class="fa-brands fa-facebook-messenger"
+          onclick="toggleDropdown('messengerDropdown')"
+        ></i>
+        <i
+          class="fa-solid fa-table-cells"
+          onclick="toggleDropdown('menuDropdown')"
+        ></i>
+      </section>
+
+      <section class="middle-section">
+        <div>
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-user-group"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-store"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-video"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+      </section>
+
+      <section class="right-section">
+        <div class="search-bar">
+          <input type="text" placeholder="بحث في فيسبوك" class="search-input" />
+        </div>
+        <img src="./assets/facebook.svg" alt="Facebook Logo" class="fb-logo" />
+      </section>
+    </nav>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdownMenu" class="dropdown">
+      <!-- Header with Profile Info -->
+      <div class="dropdown-header">
+        <div>
+          <p class="name">Ahmad Khalifa</p>
+          <img src="./assets/image.jpg" alt="Profile Picture" />
+        </div>
+
+        <div>
+          <p class="subtext">Programming Area</p>
+          <img src="./assets/favicon.ico" alt="Profile Picture" />
+        </div>
+
+        <button>
+          View all profiles <i class="fa-solid fa-angle-down"></i>
+        </button>
+      </div>
+
+      <div class="dropdown-item">
+        <i class="fa-solid fa-user"></i>
+        <span>Open Profile</span>
+      </div>
+
+      <!-- Menu Items -->
+      <div class="section-title">Meta Business Suite</div>
+      <div class="dropdown-item">
+        <i class="fa-solid fa-cog"></i>
+        <span>Setting and Privacy </span>
+      </div>
+      <div class="dropdown-item">
+        <i class="fa-solid fa-question-circle"></i>
+        <span>Help</span>
+      </div>
+      <div class="dropdown-item">
+        <i class="fa-solid fa-universal-access"></i>
+        <span>Accessibility</span>
+      </div>
+      <div class="dropdown-item">
+        <i class="fa-solid fa-comment-dots"></i>
+        <span>Community</span>
+      </div>
+
+      <!-- Footer with Logout Option -->
+      <div class="section-title">CTRL B</div>
+      <div class="dropdown-item">
+        <i class="fa-solid fa-sign-out-alt"></i>
+        <span>Log Out</span>
+      </div>
+
+      <div class="footer">
+        Privacy · Terms · Ad Choices · Advertisements · More · Meta © 2024
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- Left Sidebar -->
+      <aside class="left-sidebar">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header">
+          <p>Profile and pages</p>
+          <p>...</p>
+        </div>
+
+        <hr />
+
+        <!-- Friend Requests Section -->
+        <div class="friend-requests">
+          <div class="section-title">
+            <h4>Friend Requests</h4>
+            <a href="#">Show all</a>
+          </div>
+
+          <div class="request">
+            <div class="request-info">
+              <img
+                src="./assets/avatar-06.png"
+                alt="Profile Image"
+                class="profile-pic"
+              />
+              <span>new friend</span>
+            </div>
+
+            <div class="request-buttons">
+              <button class="confirm">Accept</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Birthdays Section -->
+        <div class="birthdays">
+          <h4>Birthdays</h4>
+          <div class="birthday-item">
+            <span class="birthday-icon">🎂</span>
+            <span>Today's birthday</span>
+            <strong>Old friend</strong>
+          </div>
+        </div>
+
+        <!-- Contacts Section -->
+        <div class="contacts">
+          <h4>Contacts</h4>
+          <ul>
+            <li>
+              <img
+                src="./assets/avatar-06.png"
+                alt="Contact Image"
+                class="contact-pic"
+              />
+              Contact 1
+            </li>
+            <li>
+              <img
+                src="./assets/avatar-06.png"
+                alt="Contact Image"
+                class="contact-pic"
+              />
+              Contact 2
+            </li>
+            <li>
+              <img
+                src="./assets/avatar-06.png"
+                alt="Contact Image"
+                class="contact-pic"
+              />
+              Contact 3
+            </li>
+          </ul>
+        </div>
+
+        <!-- Group Chat Section -->
+        <div class="group-chat">
+          <span>دردشات جماعية</span>
+          <button class="create-group">+ إنشاء دردشة جماعية</button>
+        </div>
+      </aside>
+
+      <!-- Main Content (Posts) -->
+      <main class="main-content">
+        <div class="post">
+          <p>خلاص بعم متعيطش هننام لما نرجع والله</p>
+          <div class="reactions">
+            <span>أعجبني</span> <span>تعليق</span> <span>مشاركة</span>
+          </div>
+        </div>
+        <div class="post">
+          <p>تم التعليق بواسطة السيد محمود</p>
+          <img src="./assets/whatsapp-chat.png" alt="Chat screenshot" />
+          <div class="reactions">
+            <span>أعجبني</span> <span>تعليق</span> <span>مشاركة</span>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right Sidebar -->
+      <aside class="right-sidebar">
+        <div class="profile">
+          <img src="profile.jpg" alt="Profile Picture" />
+          <p>Ahmad Khalifa</p>
+        </div>
+        <ul class="menu">
+          <li><i class="icon">👤</i> الأصدقاء</li>
+          <li><i class="icon">📊</i> لوحة المعلومات الاحترافية</li>
+          <li><i class="icon">📰</i> الأخبار</li>
+          <li><i class="icon">👥</i> المجموعات</li>
+          <li><i class="icon">🏪</i> Marketplace</li>
+          <li><i class="icon">📹</i> الفيديو</li>
+          <li><i class="icon">🕰️</i> الذكريات</li>
+          <li class="more">عرض المزيد</li>
+        </ul>
+        <div class="shortcuts">
+          <p>اختصاراتك</p>
+          <ul>
+            <li>
+              <i class="icon">🎓</i> كلية الحاسبات و علوم البيانات جامعة
+              الاسكندرية
+            </li>
+            <li><i class="icon">🌍</i> مليون مبرمج مصري</li>
+            <li><i class="icon">👨‍💻</i> Elzero Web School</li>
+            <li>
+              <i class="icon">🖥️</i> Front-End developers Arabic Community
+            </li>
+            <li><i class="icon">🎓</i> ملتقى كلية الحاسبات و علوم البيانات</li>
+            <li><i class="icon">🚗</i> modified cars lovers</li>
+            <li><i class="icon">🎱</i> 8 Ball Pool</li>
+            <li><i class="icon">⚽</i> LigaUltras</li>
+            <li><i class="icon">💻</i> Programming Area</li>
+            <li><i class="icon">🏆</i> Top Eleven</li>
+            <li><i class="icon">👑</i> القصة الملكية</li>
+            <li><i class="icon">🐍</i> WormsZone.io</li>
+            <li class="less">عرض أقل</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
