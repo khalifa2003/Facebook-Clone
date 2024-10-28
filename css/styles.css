@@ -106,6 +106,7 @@ section {
   cursor: pointer;
 }
 /* End Navbar styling */
+
 /* Dropdown Styling */
 .dropdown {
   display: none;
@@ -195,26 +196,8 @@ section {
   grid-template-columns: 3fr 6fr 3fr;
   gap: 10px;
   color: #e4e6eb;
-}
-
-/* Main Content (Posts) */
-.main-content .post {
-  background-color: #242526;
-  color: #e4e6eb;
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-.post .reactions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  font-size: 14px;
-}
-.post img {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
+  margin: 0 auto;
+  margin: 0 10px;
 }
 
 /* Left Sidebar Styling */
@@ -400,6 +383,17 @@ section {
   margin-top: 20px;
 }
 
+.main-content {
+  width: 680px;
+  margin: 0 auto;
+}
+.main-content .post {
+  background-color: #242526;
+  color: #e4e6eb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
 /* Stories Section */
 .stories {
   display: flex;
@@ -481,50 +475,41 @@ section {
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .post .post-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .post .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-
 .post .post-info {
   flex-grow: 1;
 }
-
 .post .username {
   font-weight: bold;
   display: block;
 }
-
 .post .time {
   font-size: 12px;
   color: #65676b;
 }
-
 .post .post-content {
   margin-top: 10px;
 }
-
 .post .post-content p {
   margin: 0;
   font-size: 14px;
   color: #e4e6eb;
 }
-
 .post .post-image {
   width: 100%;
   border-radius: 10px;
   margin-top: 10px;
 }
-
 .post .post-reactions {
   display: flex;
   justify-content: space-between;
@@ -532,7 +517,6 @@ section {
   color: #65676b;
   margin-top: 10px;
 }
-
 .post .post-actions {
   display: flex;
   justify-content: space-around;
@@ -540,7 +524,6 @@ section {
   padding-top: 10px;
   border-top: 1px solid #e4e6eb;
 }
-
 .post .post-actions button {
   background: none;
   border: none;
@@ -548,7 +531,31 @@ section {
   font-size: 14px;
   cursor: pointer;
 }
-
 .post .post-actions button:hover {
   color: #1877f2;
+}
+@media only screen and (max-width: 1099px) {
+  .right-sidebar {
+    display: none;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+  }
+  .main-content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .left-sidebar {
+    display: none;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 12fr;
+    margin: 0 10px;
+  }
+  .main-content {
+    width: 100%;
+  }
 }
