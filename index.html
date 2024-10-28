@@ -3,33 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom Navbar</title>
-    <link rel="stylesheet" href="./css/all.min.css" />
+    <title>Facebook Clone</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
   </head>
-  <body>
-    <!-- Navbar -->
+  <body style="background-color: #18191a">
     <nav class="navbar">
-      <!-- Profile Picture -->
       <section class="left-section">
         <img
           src="./assets/image.jpg"
           alt="Profile Picture"
           class="profile-pic"
-          onclick="toggleDropdown('profileDropdown')"
+          onclick="toggleImage('profileDropdown')"
         />
-        <i
-          class="fa-solid fa-bell"
-          onclick="toggleDropdown('notificationDropdown')"
-        ></i>
-        <i
-          class="fa-brands fa-facebook-messenger"
-          onclick="toggleDropdown('messengerDropdown')"
-        ></i>
-        <i
-          class="fa-solid fa-table-cells"
-          onclick="toggleDropdown('menuDropdown')"
-        ></i>
+        <div class="icon-container">
+          <div class="icon" onclick="toggleDropdown('notificationDropdown')">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div id="notificationDropdown" class="dropdown-menu">
+            <div class="dropdown-head">
+              <p>Notifications</p>
+              <p>...</p>
+            </div>
+            <div class="dropdown-section">
+              <div class="section-title">
+                <p>New</p>
+                <span>See all</span>
+              </div>
+              <div class="notification-item">
+                <img
+                  src="./assets/team-01.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="notification-content">
+                  <p><strong>Friend </strong> Mentioned you.</p>
+                  <span class="time">1 h</span>
+                </div>
+                <span class="status-dot"></span>
+              </div>
+              <div class="notification-item">
+                <img
+                  src="./assets/team-01.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="notification-content">
+                  <p><strong>Friend </strong> React with your comment.</p>
+                  <span class="time">1 h</span>
+                </div>
+                <span class="status-dot"></span>
+              </div>
+            </div>
+            <div class="dropdown-section">
+              <div class="section-title">
+                <p>Add</p>
+                <span>See all</span>
+              </div>
+              <div class="notification-item">
+                <img
+                  src="../assets/team-05.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="notification-content">
+                  <p><strong>John Doe</strong> Send a friend request.</p>
+                  <div class="action-buttons">
+                    <button class="confirm-btn">تأكيد</button>
+                    <button class="delete-btn">حذف</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown-section">
+              <p class="section-title">Old</p>
+              <div class="notification-item">
+                <img
+                  src="./assets/team-03.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="notification-content">
+                  <p>
+                    You have one suggestion
+                    <strong>Alaa</strong>
+                    .
+                  </p>
+                  <span class="time">2 h</span>
+                </div>
+              </div>
+            </div>
+            <button class="view-more-btn">See old notifications</button>
+          </div>
+        </div>
+
+        <div class="icon-container">
+          <div class="icon" onclick="toggleDropdown('messengerDropdown')">
+            <i class="fas fa-comment"></i>
+          </div>
+          <div id="messengerDropdown" class="dropdown-menu">
+            <div class="dropdown-head">
+              <h2>Chats</h2>
+              <div>
+                <i class="fa-solid fa-pen-to-square"></i>
+                <i class="fa-solid fa-maximize"></i>
+                <i>...</i>
+              </div>
+            </div>
+            <div class="search-bar">
+              <input type="text" placeholder="Search on Messenger" />
+              <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="tabs">
+              <button class="tab active">Chats</button>
+              <button class="tab">Groups</button>
+            </div>
+            <div class="chat-list">
+              <div class="chat-item">
+                <img
+                  src="./assets/team-01.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="chat-content">
+                  <p class="user-name">User one</p>
+                  <p class="message-preview">
+                    Messenger has upgraded security in this...
+                  </p>
+                  <span class="time">32 h</span>
+                </div>
+              </div>
+              <div class="chat-item">
+                <img
+                  src="./assets/team-02.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="chat-content">
+                  <p class="user-name">User two</p>
+                  <p class="message-preview">
+                    Messenger has upgraded security in this...
+                  </p>
+                  <span class="time">38 h</span>
+                </div>
+              </div>
+              <div class="chat-item">
+                <img
+                  src="./assets/team-03.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="chat-content">
+                  <p class="user-name">User three</p>
+                  <p class="message-preview">
+                    Messenger has upgraded security in this...
+                  </p>
+                  <span class="time">2 d</span>
+                </div>
+              </div>
+              <div class="chat-item">
+                <img
+                  src="./assets/team-04.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="chat-content">
+                  <p class="user-name">User four</p>
+                  <p class="message-preview">
+                    Messenger has upgraded security in this...
+                  </p>
+                  <span class="time">5 d</span>
+                </div>
+              </div>
+              <div class="chat-item">
+                <img
+                  src="./assets/team-05.png"
+                  alt="User Image"
+                  class="user-img"
+                />
+                <div class="chat-content">
+                  <p class="user-name">User five</p>
+                  <p class="message-preview">
+                    Messenger has upgraded security in this...
+                  </p>
+                  <span class="time">1 w</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="icon-container">
+          <div class="icon" onclick="toggleDropdown('menuDropdown')">
+            <i class="fas fa-th"></i>
+          </div>
+          <div id="menuDropdown" class="dropdown-menu">
+            <p>Menu</p>
+            <!-- Add menu items here -->
+          </div>
+        </div>
       </section>
 
       <section class="middle-section">
@@ -59,7 +231,7 @@
     </nav>
 
     <!-- Dropdown Menu -->
-    <div id="dropdownMenu" class="dropdown">
+    <div id="my-dropdownMenu" class="my-dropdown">
       <!-- Header with Profile Info -->
       <div class="dropdown-header">
         <div>
@@ -243,235 +415,270 @@
       </aside>
 
       <main class="main-content">
+        <!-- Create Post Section -->
+        <div class="create-post">
+          <div class="create-post-header">
+            <img
+              src="./assets/image.jpg"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <input type="text" placeholder="What's on your mind?" />
+          </div>
+          <div class="create-post-actions">
+            <button><i class="fas fa-video"></i> Live Video</button>
+            <button><i class="fas fa-photo-video"></i> Photo/Video</button>
+            <button><i class="far fa-smile"></i> Feeling/Activity</button>
+          </div>
+        </div>
 
-          <!-- Create Post Section -->
-          <div class="create-post">
-            <div class="create-post-header">
-              <img
-                src="./assets/image.jpg"
-                alt="Profile Picture"
-                class="profile-pic"
-              />
-              <input type="text" placeholder="What's on your mind?" />
-            </div>
-            <div class="create-post-actions">
-              <button><i class="fas fa-video"></i> Live Video</button>
-              <button><i class="fas fa-photo-video"></i> Photo/Video</button>
-              <button><i class="far fa-smile"></i> Feeling/Activity</button>
-            </div>
+        <!-- Story Section -->
+        <div class="stories">
+          <div class="story">
+            <img src="./assets/avatar-06.png" alt="Story 1" />
+            <span>Story 1</span>
           </div>
+          <div class="story">
+            <img src="./assets/avatar-06.png" alt="Story 2" />
+            <span>Story 2</span>
+          </div>
+          <div class="story">
+            <img src="./assets/avatar-06.png" alt="Story 3" />
+            <span>Story 3</span>
+          </div>
+        </div>
 
-          <!-- Story Section -->
-          <div class="stories">
-            <div class="story">
-              <img src="./assets/avatar-06.png" alt="Story 1" />
-              <span>Story 1</span>
+        <!-- Post Section -->
+        <div class="post">
+          <div class="post-header">
+            <img
+              src="./assets/team-01.png"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <div class="post-info">
+              <span class="username">User Name</span>
+              <span class="time">2 hrs</span>
             </div>
-            <div class="story">
-              <img src="./assets/avatar-06.png" alt="Story 2" />
-              <span>Story 2</span>
-            </div>
-            <div class="story">
-              <img src="./assets/avatar-06.png" alt="Story 3" />
-              <span>Story 3</span>
-            </div>
-            <div class="story">
-              <img src="./assets/avatar-06.png" alt="Story 4" />
-              <span>Story 4</span>
-            </div>
-            <div class="story">
-              <img src="./assets/avatar-06.png" alt="Story 5" />
-              <span>Story 5</span>
-            </div>
+            <i class="fa fa-ellipsis-h"></i>
           </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              ipsam animi deserunt asperiores ex beatae.
+            </p>
+            <img
+              src="./assets/posts/post1.png"
+              alt="Post Image"
+              class="post-image"
+            />
+          </div>
+          <div class="post-reactions">
+            <span>👍 ❤️ 😆 600</span>
+            <span>203 comments • 44 shares</span>
+          </div>
+          <div class="post-actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+          </div>
+        </div>
 
-          <!-- Post Section -->
-          <div class="post">
-            <div class="post-header">
-              <img
-                src="./assets/avatar-06.png"
-                alt="Profile Picture"
-                class="profile-pic"
-              />
-              <div class="post-info">
-                <span class="username">User Name</span>
-                <span class="time">5 hrs</span>
-              </div>
-              <i class="fa fa-ellipsis-h"></i>
+        <div class="post">
+          <div class="post-header">
+            <img
+              src="./assets/team-02.png"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <div class="post-info">
+              <span class="username">User Name</span>
+              <span class="time">8 hrs</span>
             </div>
-            <div class="post-content">
-              <p>Post text goes here. This is a sample post content.</p>
-              <img
-                src="./assets/favicon.ico"
-                alt="Post Image"
-                class="post-image"
-              />
-            </div>
-            <div class="post-reactions">
-              <span>👍 ❤️ 😆 250</span>
-              <span>50 comments • 10 shares</span>
-            </div>
-            <div class="post-actions">
-              <button>Like</button>
-              <button>Comment</button>
-              <button>Share</button>
-            </div>
+            <i class="fa fa-ellipsis-h"></i>
           </div>
-          <div class="post">
-            <div class="post-header">
-              <img
-                src="./assets/avatar-06.png"
-                alt="Profile Picture"
-                class="profile-pic"
-              />
-              <div class="post-info">
-                <span class="username">Another User</span>
-                <span class="time">3 hrs</span>
-              </div>
-              <i class="fa fa-ellipsis-h"></i>
-            </div>
-            <div class="post-content">
-              <p>Another post content goes here. This is an example text.</p>
-              <img
-                src="./assets/favicon.ico"
-                alt="Post Image"
-                class="post-image"
-              />
-            </div>
-            <div class="post-reactions">
-              <span>👍 ❤️ 😆 340</span>
-              <span>70 comments • 15 shares</span>
-            </div>
-            <div class="post-actions">
-              <button>Like</button>
-              <button>Comment</button>
-              <button>Share</button>
-            </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              velit libero laudantium officiis? Alias distinctio quo sequi
+              neque, nisi consectetur?
+            </p>
+            <img
+              src="./assets/posts/post2.webp"
+              alt="Post Image"
+              class="post-image"
+            />
           </div>
-          <div class="post">
-            <div class="post-header">
-              <img
-                src="./assets/avatar-06.png"
-                alt="Profile Picture"
-                class="profile-pic"
-              />
-              <div class="post-info">
-                <span class="username">User Name</span>
-                <span class="time">5 hrs</span>
-              </div>
-              <i class="fa fa-ellipsis-h"></i>
-            </div>
-            <div class="post-content">
-              <p>Post text goes here. This is a sample post content.</p>
-              <img
-                src="./assets/favicon.ico"
-                alt="Post Image"
-                class="post-image"
-              />
-            </div>
-            <div class="post-reactions">
-              <span>👍 ❤️ 😆 250</span>
-              <span>50 comments • 10 shares</span>
-            </div>
-            <div class="post-actions">
-              <button>Like</button>
-              <button>Comment</button>
-              <button>Share</button>
-            </div>
+          <div class="post-reactions">
+            <span>👍 ❤️ 😆 802</span>
+            <span>246 comments • 65 shares</span>
           </div>
-          <div class="post">
-            <div class="post-header">
-              <img
-                src="./assets/avatar-06.png"
-                alt="Profile Picture"
-                class="profile-pic"
-              />
-              <div class="post-info">
-                <span class="username">Another User</span>
-                <span class="time">3 hrs</span>
-              </div>
-              <i class="fa fa-ellipsis-h"></i>
-            </div>
-            <div class="post-content">
-              <p>Another post content goes here. This is an example text.</p>
-              <img
-                src="./assets/favicon.ico"
-                alt="Post Image"
-                class="post-image"
-              />
-            </div>
-            <div class="post-reactions">
-              <span>👍 ❤️ 😆 340</span>
-              <span>70 comments • 15 shares</span>
-            </div>
-            <div class="post-actions">
-              <button>Like</button>
-              <button>Comment</button>
-              <button>Share</button>
-            </div>
+          <div class="post-actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
           </div>
-          <div class="post">
-            <div class="post-header">
-              <img
-                src="./assets/avatar-06.png"
-                alt="Profile Picture"
-                class="profile-pic"
-              />
-              <div class="post-info">
-                <span class="username">User Name</span>
-                <span class="time">5 hrs</span>
-              </div>
-              <i class="fa fa-ellipsis-h"></i>
+        </div>
+
+        <div class="post">
+          <div class="post-header">
+            <img
+              src="./assets/team-03.png"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <div class="post-info">
+              <span class="username">User Name</span>
+              <span class="time">1 d</span>
             </div>
-            <div class="post-content">
-              <p>Post text goes here. This is a sample post content.</p>
-              <img
-                src="./assets/favicon.ico"
-                alt="Post Image"
-                class="post-image"
-              />
-            </div>
-            <div class="post-reactions">
-              <span>👍 ❤️ 😆 250</span>
-              <span>50 comments • 10 shares</span>
-            </div>
-            <div class="post-actions">
-              <button>Like</button>
-              <button>Comment</button>
-              <button>Share</button>
-            </div>
+            <i class="fa fa-ellipsis-h"></i>
           </div>
-          <div class="post">
-            <div class="post-header">
-              <img
-                src="./assets/avatar-06.png"
-                alt="Profile Picture"
-                class="profile-pic"
-              />
-              <div class="post-info">
-                <span class="username">Another User</span>
-                <span class="time">3 hrs</span>
-              </div>
-              <i class="fa fa-ellipsis-h"></i>
-            </div>
-            <div class="post-content">
-              <p>Another post content goes here. This is an example text.</p>
-              <img
-                src="./assets/favicon.ico"
-                alt="Post Image"
-                class="post-image"
-              />
-            </div>
-            <div class="post-reactions">
-              <span>👍 ❤️ 😆 340</span>
-              <span>70 comments • 15 shares</span>
-            </div>
-            <div class="post-actions">
-              <button>Like</button>
-              <button>Comment</button>
-              <button>Share</button>
-            </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum,
+              temporibus.
+            </p>
+            <img
+              src="./assets/posts/post4.avif"
+              alt="Post Image"
+              class="post-image"
+            />
           </div>
+          <div class="post-reactions">
+            <span>👍 ❤️ 😆 50</span>
+            <span>14 comments • 2 shares</span>
+          </div>
+          <div class="post-actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header">
+            <img
+              src="./assets/team-04.png"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <div class="post-info">
+              <span class="username">User Name</span>
+              <span class="time">10 hrs</span>
+            </div>
+            <i class="fa fa-ellipsis-h"></i>
+          </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              velit libero laudantium officiis? Alias distinctio quo sequi
+              neque, nisi consectetur? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Fuga, ab accusantium libero aperiam non
+              voluptatibus. Hic quas pariatur voluptatum magni perferendis
+              beatae sed ad veritatis obcaecati doloremque nihil laboriosam,
+              eius in est. Nam quibusdam quidem ratione! Iste molestiae optio
+              atque, ut necessitatibus in temporibus, rerum, nostrum nulla sunt
+              quos. Facilis optio totam voluptatum doloremque culpa rerum
+              excepturi exercitationem fugiat ullam officia ipsum maxime, quo
+              vero eveniet ratione magnam a suscipit. Veritatis illum libero
+              aliquam aliquid atque, nostrum eveniet assumenda. Dolor recusandae
+              doloribus quam labore nulla? Officia, saepe accusantium. Dolores
+              corporis unde vitae laborum recusandae. Molestiae temporibus, in
+              blanditiis nemo enim fugiat dicta natus sequi aperiam non est
+              necessitatibus deleniti ipsa dolor, impedit neque vero nam beatae
+              a officiis placeat? Impedit reprehenderit odit fugit eius ut rem
+              asperiores dolorem beatae quisquam reiciendis dolore autem cumque
+              tenetur nihil quia, in architecto natus cum repellat ipsa!
+              Inventore nobis sit nesciunt cum recusandae possimus quam, nostrum
+              eum, velit deserunt reiciendis ab tenetur rem voluptatibus? Earum
+              totam sit voluptas vel vitae, optio accusamus nulla illo modi
+              minima quas eveniet, laudantium ullam excepturi officia ex porro
+              dolorem, at repellat deleniti magnam eius maxime. Quo molestias
+              quaerat cupiditate eligendi dolor quam eius, aperiam voluptas, eum
+              iusto quod.
+            </p>
+          </div>
+          <div class="post-reactions">
+            <span>👍 ❤️ 😆 250</span>
+            <span>50 comments • 10 shares</span>
+          </div>
+          <div class="post-actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header">
+            <img
+              src="./assets/team-04.png"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <div class="post-info">
+              <span class="username">User Name</span>
+              <span class="time">10 hrs</span>
+            </div>
+            <i class="fa fa-ellipsis-h"></i>
+          </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              velit libero laudantium officiis? Alias distinctio quo sequi
+              neque, nisi consectetur?
+            </p>
+            <img
+              src="./assets/posts/post5.jpg"
+              alt="Post Image"
+              class="post-image"
+            />
+          </div>
+          <div class="post-reactions">
+            <span>👍 ❤️ 😆 250</span>
+            <span>50 comments • 10 shares</span>
+          </div>
+          <div class="post-actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header">
+            <img
+              src="./assets/team-05.png"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <div class="post-info">
+              <span class="username">User Name</span>
+              <span class="time">6 m</span>
+            </div>
+            <i class="fa fa-ellipsis-h"></i>
+          </div>
+          <div class="post-content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum,
+              temporibus.
+            </p>
+            <img
+              src="./assets/posts/post3.webp"
+              alt="Post Image"
+              class="post-image"
+            />
+          </div>
+          <div class="post-reactions">
+            <span>👍 ❤️ 😆 15</span>
+            <span>12 comments • 2 shares</span>
+          </div>
+          <div class="post-actions">
+            <button>Like</button>
+            <button>Comment</button>
+            <button>Share</button>
+          </div>
+        </div>
       </main>
 
       <aside class="right-sidebar">
