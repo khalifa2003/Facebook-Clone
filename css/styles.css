@@ -558,4 +558,11 @@ section {
   .main-content {
     width: 100%;
   }
+  .middle-section {
+    display: none;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+  }
 }
