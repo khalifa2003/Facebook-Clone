@@ -274,8 +274,8 @@ h4 {
   cursor: pointer;
 }
 .right-sidebar .shortcuts ul li i,
-.right-sidebar .menu li i {
-  margin-left: 8px;
+.right-sidebar .menu li .icon {
+  margin-right: 8px;
 }
 .right-sidebar .shortcuts p {
   margin: 10px 0;
@@ -461,12 +461,12 @@ h4 {
   opacity: 1;
   transform: translateY(0);
 }
-.icon-container {
+.dropdown-menu .icon-container {
   position: relative;
   display: inline-block;
   margin: 0 10px;
 }
-.icon {
+.dropdown-menu .icon {
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -476,7 +476,7 @@ h4 {
   align-items: center;
   justify-content: center;
 }
-.icon i {
+.dropdown-menu .icon i {
   color: #ddd;
   font-size: 20px;
 }
@@ -777,9 +777,6 @@ h4 {
     grid-template-columns: 1fr;
     margin: 0 10px;
   }
-  .main-content {
-    width: 100%;
-  }
   .middle-section {
     display: none;
   }
@@ -802,7 +799,7 @@ h4 {
   .icon-container {
     position: static;
   }
-  .navbar .left-section {
+  .left-section {
     position: relative;
   }
 }
