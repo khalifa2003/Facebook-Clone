@@ -1,4 +1,4 @@
-/* General styling */
+/* Start Global Rules */
 * {
   margin: 0;
   padding: 0;
@@ -17,8 +17,9 @@ a {
 li {
   list-style: none;
 }
+/* End Global Rules */
 
-/* Start Navbar styling */
+/* Start Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -34,7 +35,6 @@ section {
   align-items: center;
 }
 .navbar .left-section {
-  display: flex;
   justify-content: flex-start;
   flex: 3;
   gap: 8px;
@@ -106,96 +106,8 @@ section {
   color: #2d88ff;
   transition: 0.3s ease-in-out;
 }
-/* End Navbar styling */
+/* End Navbar */
 
-/* my-dropdown Styling */
-.my-dropdown {
-  display: none;
-  position: absolute;
-  top: 60px;
-  left: 10px;
-  background-color: #242526;
-  color: #e4e6eb;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  width: 300px;
-  padding: 15px;
-  z-index: 1000;
-  display: block;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(-10px);
-}
-.my-dropdown.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-.dropdown-header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #3a3b3c;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 10px;
-  gap: 5px;
-}
-.dropdown-header div {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 3px solid #3a3b3c;
-  padding: 8px;
-}
-.dropdown-header div:hover {
-  background-color: #3a3b3c;
-  border-radius: 5px;
-}
-.dropdown-header button {
-  width: 100%;
-  background-color: #3a3b3c;
-  color: #e4e6eb;
-  border: none;
-  border-radius: 5px;
-  padding: 7px 0;
-}
-.dropdown-header img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-}
-.dropdown-header .name {
-  font-size: 14px;
-  font-weight: bold;
-}
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 0;
-  cursor: pointer;
-}
-.dropdown-item:hover {
-  background-color: #3a3b3c;
-  border-radius: 5px;
-}
-.dropdown-item i {
-  color: #e4e6eb;
-}
-.section-title {
-  font-size: 12px;
-  color: #b0b3b8;
-  margin-top: 10px;
-}
-.footer {
-  margin-top: 10px;
-  font-size: 10px;
-  color: #b0b3b8;
-  text-align: center;
-}
 /* General content styling */
 .content {
   display: grid;
@@ -208,19 +120,17 @@ section {
   margin: 0 auto;
 }
 
-/* Left Sidebar Styling */
+/* Start Left Sidebar */
 .left-sidebar {
   padding: 10px;
   border-radius: 8px;
+  color: #b0b3b8;
 }
 .sidebar-header,
-.friend-requests h4,
-.birthdays h4,
-.contacts h4,
-.group-chat span {
-  color: #b0b3b8;
-  font-weight: bold;
+.group-chat span,
+h4 {
   margin-bottom: 10px;
+  font-weight: bold;
 }
 .sidebar-header {
   display: flex;
@@ -232,10 +142,7 @@ section {
   background-color: #3a3b3c;
   margin: 10px 0;
 }
-.friend-requests,
-.birthdays,
-.contacts,
-.group-chat {
+.mb-20 {
   margin-bottom: 20px;
 }
 .friend-requests .section-title {
@@ -337,8 +244,9 @@ section {
   cursor: pointer;
   border-radius: 4px;
 }
+/* End Left Sidebar */
 
-/* Right Sidebar Styling */
+/* Start Right Sidebar */
 .right-sidebar {
   color: #e4e6eb;
   padding: 10px;
@@ -358,27 +266,16 @@ section {
 .right-sidebar .profile p {
   margin: 0;
 }
-.right-sidebar .menu,
-.shortcuts ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-.right-sidebar .menu li,
-.right-sidebar .shortcuts ul li {
+.right-sidebar .shortcuts ul li,
+.right-sidebar .menu li {
   display: flex;
   align-items: center;
   padding: 8px 0;
   cursor: pointer;
 }
-.right-sidebar .menu li i,
-.right-sidebar .shortcuts ul li i {
+.right-sidebar .shortcuts ul li i,
+.right-sidebar .menu li i {
   margin-left: 8px;
-}
-.right-sidebar .menu .more,
-.right-sidebar .shortcuts .less {
-  color: #aaa;
-  cursor: pointer;
 }
 .right-sidebar .shortcuts p {
   margin: 10px 0;
@@ -386,11 +283,13 @@ section {
   border-top: 1px solid #444;
   padding-top: 10px;
 }
-.feed-container {
+.right-sidebar .feed-container {
   width: 500px;
   margin-top: 20px;
 }
+/* End Right Sidebar */
 
+/* Start Main Content */
 .main-content {
   width: 680px;
   margin: 0 auto;
@@ -402,8 +301,7 @@ section {
   border-radius: 8px;
   margin-bottom: 10px;
 }
-/* Stories Section */
-.stories {
+.main-content .stories {
   display: flex;
   justify-content: space-around;
   padding: 10px;
@@ -411,43 +309,41 @@ section {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.story {
+.main-content .story {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 80px;
 }
-.story img {
+.main-content .story img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: 2px solid #1877f2;
 }
-.story span {
+.main-content .story span {
   font-size: 12px;
   margin-top: 5px;
 }
-
-/* Create Post Section */
-.create-post {
+.main-content .create-post {
   background-color: #242526;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
 }
-.create-post-header {
+.main-content .create-post-header {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-.create-post-header .profile-pic {
+.main-content .create-post-header .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.create-post-header input {
+.main-content .create-post-header input {
   flex-grow: 1;
   padding: 10px;
   border-radius: 20px;
@@ -456,11 +352,11 @@ section {
   color: #e4e6eb;
   font-size: 14px;
 }
-.create-post-actions {
+.main-content .create-post-actions {
   display: flex;
   justify-content: space-between;
 }
-.create-post-actions button {
+.main-content .create-post-actions button {
   display: flex;
   align-items: center;
   border: none;
@@ -469,113 +365,101 @@ section {
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
-.create-post-actions button:hover {
+.main-content .create-post-actions button:hover {
   color: #1877f2;
 }
-.create-post-actions button i {
+.main-content .create-post-actions button i {
   margin-right: 5px;
 }
-
-/* Post Styling */
-.post {
+.main-content .post {
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.post .post-header {
+.main-content .post .post-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.post .profile-pic {
+.main-content .post .profile-pic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.post .post-info {
+.main-content .post .post-info {
   flex-grow: 1;
 }
-.post .username {
+.main-content .post .username {
   font-weight: bold;
   display: block;
 }
-.post .time {
+.main-content .post .time {
   font-size: 12px;
   color: #65676b;
 }
-.post .post-content {
+.main-content .post .post-content {
   margin-top: 10px;
 }
-.post .post-content p {
+.main-content .post .post-content p {
   margin: 0;
   font-size: 14px;
   color: #e4e6eb;
 }
-.post .post-image {
+.main-content .post .post-image {
   width: 100%;
   border-radius: 10px;
   margin-top: 10px;
 }
-.post .post-reactions {
+.main-content .post .post-reactions {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   color: #65676b;
   margin-top: 10px;
 }
-.post .post-actions {
+.main-content .post .post-actions {
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #e4e6eb;
 }
-.post .post-actions button {
+.main-content .post .post-actions button {
   background: none;
   border: none;
   color: #65676b;
   font-size: 14px;
   cursor: pointer;
 }
-.post .post-actions button:hover {
+.main-content .post .post-actions button:hover {
   color: #1877f2;
 }
-@media only screen and (max-width: 1099px) {
-  .right-sidebar {
-    display: none;
-  }
-  .content {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-  }
-  .main-content {
-    width: 100%;
-  }
+/* End Main Content */
+
+/* Start Dropdowns */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  left: 5px;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
 }
-@media only screen and (max-width: 900px) {
-  .left-sidebar {
-    display: none;
-  }
-  .content {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 10px;
-  }
-  .main-content {
-    width: 100%;
-  }
-  .middle-section {
-    display: none;
-  }
-  .right-section div {
-    display: none;
-  }
-  .navbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.dropdown-menu.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .icon-container {
   position: relative;
@@ -596,25 +480,71 @@ section {
   color: #ddd;
   font-size: 20px;
 }
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: #333;
-  color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  left: 5px;
+/* Start Account Dropdown */
+.dropdown-menu .dropdown-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #3a3b3c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  gap: 5px;
 }
-.dropdown-menu h3 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  color: #ccc;
+.dropdown-menu .dropdown-header div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #3a3b3c;
+  padding: 8px;
 }
+.dropdown-menu .dropdown-header div:hover {
+  background-color: #3a3b3c;
+  border-radius: 5px;
+}
+.dropdown-menu .dropdown-header button {
+  width: 100%;
+  background-color: #3a3b3c;
+  color: #e4e6eb;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 0;
+}
+.dropdown-menu .dropdown-header img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.dropdown-menu .dropdown-header .name {
+  font-size: 14px;
+  font-weight: bold;
+}
+.dropdown-menu .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #3a3b3c;
+  border-radius: 5px;
+}
+.dropdown-menu .dropdown-item i {
+  color: #e4e6eb;
+}
+.dropdown-menu .footer {
+  margin-top: 10px;
+  font-size: 10px;
+  color: #b0b3b8;
+  text-align: center;
+}
+/* Start Account Dropdown */
+
+/* Start Notifications Dropdown */
 .dropdown-menu .dropdown-head {
   display: flex;
   flex-direction: row;
@@ -694,9 +624,10 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
-.dropdown-menu.active {
-  display: block;
-}
+
+/* End Notifications Dropdown */
+
+/* Start Message Dropdown */
 .dropdown-menu .search-bar {
   display: flex;
   margin-bottom: 10px;
@@ -742,12 +673,6 @@ section {
   padding: 10px 0;
   border-bottom: 1px solid #444;
 }
-.dropdown-menu .user-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
 .dropdown-menu .chat-content {
   flex-grow: 1;
 }
@@ -756,8 +681,122 @@ section {
   color: #fff;
   margin: 0;
 }
-.message-preview {
+.dropdown-menu .message-preview {
   font-size: 12px;
   color: #888;
   margin: 2px 0 0;
+}
+.dropdown-menu h1 {
+  margin: 10px;
+}
+.dropdown-menu .menu-left-section {
+  flex: 1;
+  background-color: #242526;
+  padding: 10px;
+  border-right: 1px solid #3a3b3c;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.dropdown-menu .menu-right-section {
+  flex: 2;
+  background-color: #242526;
+  padding: 10px;
+  border-right: 1px solid #3a3b3c;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.dropdown-menu .search-input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #ccc;
+}
+.dropdown-menu .menu-section {
+  margin-bottom: 15px;
+}
+.dropdown-menu .section-title {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+/* End Message Dropdown */
+
+/* Start Menu Dropdown */
+.dropdown-menu .menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-menu .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ddd;
+}
+.dropdown-menu .menu-item i {
+  margin-right: 10px;
+  color: #aaa;
+}
+.dropdown-menu .menu-item:hover {
+  color: #fff;
+  background-color: #444;
+  border-radius: 5px;
+}
+.dropdown-menu .dropdown-menu.active {
+  display: block;
+}
+.width {
+  width: 600px;
+  height: 600px;
+  overflow-y: scroll;
+}
+/* End Menu Dropdown */
+@media only screen and (max-width: 1099px) {
+  .right-sidebar {
+    display: none;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .main-content {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .left-sidebar {
+    display: none;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+  }
+  .main-content {
+    width: 100%;
+  }
+  .middle-section {
+    display: none;
+  }
+  .right-section div {
+    display: none;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .width {
+    width: 300px;
+  }
+  .menu-left-section {
+    display: none;
+  }
+  .menu-right-section {
+    flex: 1;
+  }
 }

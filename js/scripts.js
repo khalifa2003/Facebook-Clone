@@ -1,4 +1,3 @@
-// Toggle dropdown visibility
 
 function toggleImage() {
   if (event.target.matches(".profile-pic")) {

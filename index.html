@@ -10,12 +10,67 @@
   <body style="background-color: #18191a">
     <nav class="navbar">
       <section class="left-section">
-        <img
-          src="./assets/image.jpg"
-          alt="Profile Picture"
-          class="profile-pic"
-          onclick="toggleImage('profileDropdown')"
-        />
+        <div class="icon-container">
+          <div class="icon" onclick="toggleDropdown('my-dropdownMenu')">
+            <img
+              src="./assets/image.jpg"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+          </div>
+          <div id="my-dropdownMenu" class="dropdown-menu">
+            <div class="dropdown-header">
+              <div>
+                <p class="name">Ahmad Khalifa</p>
+                <img src="./assets/image.jpg" alt="Profile Picture" />
+              </div>
+
+              <div>
+                <p class="subtext">Programming Area</p>
+                <img src="./assets/favicon.ico" alt="Profile Picture" />
+              </div>
+
+              <button>
+                View all profiles <i class="fa-solid fa-angle-down"></i>
+              </button>
+            </div>
+
+            <div class="dropdown-item">
+              <i class="fa-solid fa-user"></i>
+              <span>Open Profile</span>
+            </div>
+
+            <div class="section-title">Meta Business Suite</div>
+            <div class="dropdown-item">
+              <i class="fa-solid fa-cog"></i>
+              <span>Setting and Privacy </span>
+            </div>
+            <div class="dropdown-item">
+              <i class="fa-solid fa-question-circle"></i>
+              <span>Help</span>
+            </div>
+            <div class="dropdown-item">
+              <i class="fa-solid fa-universal-access"></i>
+              <span>Accessibility</span>
+            </div>
+            <div class="dropdown-item">
+              <i class="fa-solid fa-comment-dots"></i>
+              <span>Community</span>
+            </div>
+
+            <!-- Footer with Logout Option -->
+            <div class="section-title">CTRL B</div>
+            <div class="dropdown-item">
+              <i class="fa-solid fa-sign-out-alt"></i>
+              <span>Log Out</span>
+            </div>
+
+            <div class="footer">
+              Privacy · Terms · Ad Choices · Advertisements · More · Meta © 2024
+            </div>
+          </div>
+        </div>
+
         <div class="icon-container">
           <div class="icon" onclick="toggleDropdown('notificationDropdown')">
             <i class="fas fa-bell"></i>
@@ -69,8 +124,8 @@
                 <div class="notification-content">
                   <p><strong>John Doe</strong> Send a friend request.</p>
                   <div class="action-buttons">
-                    <button class="confirm-btn">تأكيد</button>
-                    <button class="delete-btn">حذف</button>
+                    <button class="confirm-btn">Accept</button>
+                    <button class="delete-btn">Delete</button>
                   </div>
                 </div>
               </div>
@@ -195,11 +250,81 @@
 
         <div class="icon-container">
           <div class="icon" onclick="toggleDropdown('menuDropdown')">
-            <i class="fas fa-th"></i>
+            <i class="fas fa-bars"></i>
           </div>
-          <div id="menuDropdown" class="dropdown-menu">
-            <p>Menu</p>
-            <!-- Add menu items here -->
+          <div id="menuDropdown" class="dropdown-menu width">
+            <h1>Menu</h1>
+            <div style="display: flex; flex-direction: row">
+              <div class="menu-left-section">
+                <h3 class="section-title">Create</h3>
+                <ul class="menu-list">
+                  <li class="menu-item"><i class="fas fa-edit"></i> Post</li>
+                  <li class="menu-item">
+                    <i class="fas fa-book-open"></i> Story
+                  </li>
+                  <li class="menu-item"><i class="fas fa-star"></i> Reels</li>
+                  <li class="menu-item">
+                    <i class="fas fa-birthday-cake"></i> Personal occasion
+                  </li>
+                  <hr />
+                  <li class="menu-item"><i class="fas fa-flag"></i> Page</li>
+                  <li class="menu-item"><i class="fas fa-bullhorn"></i> Ad</li>
+                  <li class="menu-item"><i class="fas fa-users"></i> Group</li>
+                  <li class="menu-item">
+                    <i class="fas fa-shopping-bag"></i>
+                    Marketplace
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu-right-section">
+                <input
+                  type="text"
+                  placeholder="Search on list"
+                  class="search-input"
+                />
+
+                <div class="menu-section">
+                  <h3 class="section-title">Professionalism</h3>
+                  <ul class="menu-list">
+                    <li class="menu-item">
+                      <i class="fas fa-chart-bar"></i> Advertising Manager
+                    </li>
+                    <li class="menu-item">
+                      <i class="fas fa-briefcase"></i> Meta Business Suite
+                    </li>
+                    <li class="menu-item">
+                      <i class="fas fa-info-circle"></i> Dashboard for Meta
+                    </li>
+                    <li class="menu-item">
+                      <i class="fas fa-bullhorn"></i> Advertising Manager
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="menu-section">
+                  <h3 class="section-title">Social</h3>
+                  <ul class="menu-list">
+                    <li class="menu-item">
+                      <i class="fas fa-calendar"></i> Occasions
+                    </li>
+                    <li class="menu-item">
+                      <i class="fas fa-user-friends"></i> Friends
+                    </li>
+                    <li class="menu-item">
+                      <i class="fas fa-users"></i> Groups
+                    </li>
+                    <li class="menu-item">
+                      <i class="fas fa-newspaper"></i> Last News
+                    </li>
+                    <li class="menu-item"><i class="fas fa-bell"></i> News</li>
+                    <li class="menu-item">
+                      <i class="fas fa-store"></i> Pages
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -221,69 +346,7 @@
           <i class="fa-solid fa-gamepad"></i>
         </div>
       </section>
-
-      <section class="right-section">
-        <div class="search-bar">
-          <input type="text" placeholder="بحث في فيسبوك" class="search-input" />
-        </div>
-        <img src="./assets/facebook.svg" alt="Facebook Logo" class="fb-logo" />
-      </section>
     </nav>
-
-    <!-- Dropdown Menu -->
-    <div id="my-dropdownMenu" class="my-dropdown">
-      <!-- Header with Profile Info -->
-      <div class="dropdown-header">
-        <div>
-          <p class="name">Ahmad Khalifa</p>
-          <img src="./assets/image.jpg" alt="Profile Picture" />
-        </div>
-
-        <div>
-          <p class="subtext">Programming Area</p>
-          <img src="./assets/favicon.ico" alt="Profile Picture" />
-        </div>
-
-        <button>
-          View all profiles <i class="fa-solid fa-angle-down"></i>
-        </button>
-      </div>
-
-      <div class="dropdown-item">
-        <i class="fa-solid fa-user"></i>
-        <span>Open Profile</span>
-      </div>
-
-      <!-- Menu Items -->
-      <div class="section-title">Meta Business Suite</div>
-      <div class="dropdown-item">
-        <i class="fa-solid fa-cog"></i>
-        <span>Setting and Privacy </span>
-      </div>
-      <div class="dropdown-item">
-        <i class="fa-solid fa-question-circle"></i>
-        <span>Help</span>
-      </div>
-      <div class="dropdown-item">
-        <i class="fa-solid fa-universal-access"></i>
-        <span>Accessibility</span>
-      </div>
-      <div class="dropdown-item">
-        <i class="fa-solid fa-comment-dots"></i>
-        <span>Community</span>
-      </div>
-
-      <!-- Footer with Logout Option -->
-      <div class="section-title">CTRL B</div>
-      <div class="dropdown-item">
-        <i class="fa-solid fa-sign-out-alt"></i>
-        <span>Log Out</span>
-      </div>
-
-      <div class="footer">
-        Privacy · Terms · Ad Choices · Advertisements · More · Meta © 2024
-      </div>
-    </div>
 
     <div class="content">
       <aside class="left-sidebar">
@@ -292,7 +355,7 @@
           <p>...</p>
         </div>
         <hr />
-        <div class="friend-requests">
+        <div class="friend-requests mb-20">
           <div class="section-title">
             <h4>Friend Requests</h4>
             <a href="#">Show all</a>
@@ -315,7 +378,7 @@
           </div>
         </div>
         <hr />
-        <div class="birthdays">
+        <div class="birthdays mb-20">
           <h4>Birthdays</h4>
           <div class="birthday-item">
             <span class="birthday-icon">🎂</span>
@@ -324,7 +387,7 @@
           </div>
         </div>
         <hr />
-        <div class="contacts">
+        <div class="contacts mb-20">
           <div class="section-title">
             <div>
               <p>...</p>
@@ -408,14 +471,13 @@
           </ul>
         </div>
         <hr />
-        <div class="group-chat">
+        <div class="group-chat mb-20">
           <span>Chat Group</span>
           <button class="create-group">+ Create Group Chat</button>
         </div>
       </aside>
 
       <main class="main-content">
-        <!-- Create Post Section -->
         <div class="create-post">
           <div class="create-post-header">
             <img
@@ -432,23 +494,29 @@
           </div>
         </div>
 
-        <!-- Story Section -->
         <div class="stories">
           <div class="story">
-            <img src="./assets/avatar-06.png" alt="Story 1" />
+            <img src="./assets/team-01.png" alt="Story 1" />
             <span>Story 1</span>
           </div>
           <div class="story">
-            <img src="./assets/avatar-06.png" alt="Story 2" />
+            <img src="./assets/team-02.png" alt="Story 2" />
             <span>Story 2</span>
           </div>
           <div class="story">
-            <img src="./assets/avatar-06.png" alt="Story 3" />
+            <img src="./assets/team-03.png" alt="Story 3" />
+            <span>Story 3</span>
+          </div>
+          <div class="story">
+            <img src="./assets/team-04.png" alt="Story 4" />
+            <span>Story 2</span>
+          </div>
+          <div class="story">
+            <img src="./assets/team-05.png" alt="Story 5" />
             <span>Story 3</span>
           </div>
         </div>
 
-        <!-- Post Section -->
         <div class="post">
           <div class="post-header">
             <img
