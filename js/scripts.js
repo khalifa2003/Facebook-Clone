@@ -1,9 +1,4 @@
 
-function toggleImage() {
-  if (event.target.matches(".profile-pic")) {
-    document.getElementById("my-dropdownMenu").classList.toggle("active");
-  }
-}
 function toggleDropdown(dropdownId) {
   const dropdown = document.getElementById(dropdownId);
   const isActive = dropdown.classList.contains("active");
