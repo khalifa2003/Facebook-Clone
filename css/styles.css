@@ -441,7 +441,6 @@ h4 {
 
 /* Start Dropdowns */
 .dropdown-menu {
-  display: none;
   position: absolute;
   top: 50px;
   right: 0;
@@ -776,7 +775,8 @@ h4 {
   .content {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 0 10px;
+    margin: 0;
+    overflow: hidden;
   }
   .middle-section {
     display: none;
@@ -802,5 +802,8 @@ h4 {
   }
   .left-section {
     position: relative;
+  }
+  .dropdown-menu {
+    width: 250px;
   }
 }
