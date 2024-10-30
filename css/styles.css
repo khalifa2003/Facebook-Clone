@@ -308,6 +308,7 @@ h4 {
   background-color: #242526;
   border-radius: 10px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 .main-content .story {
   display: flex;
